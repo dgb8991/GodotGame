@@ -1,0 +1,759 @@
+[gd_scene load_steps=72 format=4 uid="uid://dwybp2au2aqtx"]
+
+[ext_resource type="Texture2D" uid="uid://266qmi6brytn" path="res://PixelAdventure/Background/Gray.png" id="1_1wyto"]
+[ext_resource type="Texture2D" uid="uid://c46eiejsqaobu" path="res://PixelAdventure/Terrain/Terrain (16x16).png" id="2_x311f"]
+[ext_resource type="PackedScene" uid="uid://cykse2esvq82b" path="res://Scenes/maincharacter.tscn" id="3_og27v"]
+[ext_resource type="PackedScene" uid="uid://hyk3n3ju4aqn" path="res://Scenes/banana.tscn" id="4_spe05"]
+[ext_resource type="PackedScene" uid="uid://cvl6oaf8iuxx7" path="res://Scenes/cherry.tscn" id="5_0japl"]
+[ext_resource type="PackedScene" uid="uid://dxqrpo1m6dpi2" path="res://Scenes/pina.tscn" id="6_yntn8"]
+[ext_resource type="Script" path="res://game_manager.gd" id="7_sgltp"]
+[ext_resource type="PackedScene" uid="uid://cc80m0atjcp2i" path="res://Scenes/finish.tscn" id="8_yxj4u"]
+[ext_resource type="Script" path="res://Scenes/finish.gd" id="9_c0nkh"]
+[ext_resource type="PackedScene" uid="uid://j0m1pd7exfop" path="res://Scenes/fresas.tscn" id="10_dw4fb"]
+[ext_resource type="PackedScene" uid="uid://n3a31jimtrlk" path="res://Scenes/caracol.tscn" id="11_fjgmk"]
+[ext_resource type="AudioStream" uid="uid://dsotg2hppx22m" path="res://Sonidos/The-Island-of-Dr-Sinister.mp3" id="12_0um1m"]
+[ext_resource type="AudioStream" uid="uid://belv1jyy1xlyj" path="res://Sonidos/Sheep.mp3" id="13_2odhl"]
+[ext_resource type="AudioStream" uid="uid://c7gix1472oghb" path="res://Sonidos/Coins1.mp3" id="14_1485u"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_n2qru"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_m4i6d"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pdsbj"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_134iq"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tajyv"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q77np"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tu8bw"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bujw3"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_oatbw"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rhyts"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_41fuc"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ol0sq"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_u55p0"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7r0oi"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_a54jg"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dw6cv"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2ym7v"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_j8sbl"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gmrvt"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_b82g4"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6jw5p"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8ivur"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rkcpw"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vgnrh"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mihd2"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3ptkg"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8ppq5"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ydopy"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tvo1l"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qjkdb"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fuaot"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_j7wsu"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ibhgn"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ib685"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qoi1r"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3ov5v"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lir6v"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8cefh"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_njpaj"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hbddg"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rymly"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_nw1gk"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fpotq"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6nqyg"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lejex"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y2bsx"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_caa7d"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_t08kd"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_64kpi"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_upel8"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tx3ds"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gp8ip"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_djtf2"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ejg8t"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ts7h5"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hjmvm"]
+texture = ExtResource("2_x311f")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:0/0 = 0
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:0/0 = 0
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:0/0 = 0
+12:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_pdsbj")
+12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:0/0 = 0
+13:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_bujw3")
+13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:0/0 = 0
+14:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_dw6cv")
+14:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:0/0 = 0
+15:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_8ivur")
+15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:0/0 = 0
+17:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:0/0 = 0
+18:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:0/0 = 0
+19:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:1/0 = 0
+9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:1/0 = 0
+10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:1/0 = 0
+12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:1/0 = 0
+13:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_oatbw")
+13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:1/0 = 0
+14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:1/0 = 0
+15:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:1/0 = 0
+17:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:1/0 = 0
+18:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:1/0 = 0
+19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:2/0 = 0
+13:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:2/0 = 0
+14:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:2/0 = 0
+15:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_vgnrh")
+15:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:2/0 = 0
+17:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:2/0 = 0
+18:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:2/0 = 0
+19:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:4/0 = 0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:4/0 = 0
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:4/0 = 0
+10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:4/0 = 0
+12:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_134iq")
+12:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:4/0 = 0
+13:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_41fuc")
+13:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:4/0 = 0
+14:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_j8sbl")
+14:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:4/0 = 0
+15:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_mihd2")
+15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:4/0 = 0
+17:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_tvo1l")
+17:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:4/0 = 0
+18:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_qoi1r")
+18:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:4/0 = 0
+19:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hbddg")
+19:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+20:4/0 = 0
+20:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_y2bsx")
+20:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+21:4/0 = 0
+21:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_t08kd")
+21:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:5/0 = 0
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:5/0 = 0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:5/0 = 0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:5/0 = 0
+9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:5/0 = 0
+10:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:5/0 = 0
+12:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_tajyv")
+12:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:5/0 = 0
+13:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_ol0sq")
+13:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:5/0 = 0
+14:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_gmrvt")
+14:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:5/0 = 0
+15:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_3ptkg")
+15:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:5/0 = 0
+17:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_qjkdb")
+17:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:5/0 = 0
+18:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_3ov5v")
+18:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:5/0 = 0
+19:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_rymly")
+19:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+20:5/0 = 0
+20:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_caa7d")
+20:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+21:5/0 = 0
+21:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_64kpi")
+21:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:6/0 = 0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:6/0 = 0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:6/0 = 0
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:6/0 = 0
+13:6/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_u55p0")
+13:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:6/0 = 0
+14:6/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_b82g4")
+14:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:6/0 = 0
+15:6/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_8ppq5")
+15:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:6/0 = 0
+17:6/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_fuaot")
+17:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:6/0 = 0
+18:6/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_lir6v")
+18:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:6/0 = 0
+19:6/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_nw1gk")
+19:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:8/0 = 0
+0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:8/0 = 0
+1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:8/0 = 0
+2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:8/0 = 0
+3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:8/0 = 0
+4:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:8/0 = 0
+6:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_tx3ds")
+6:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:8/0 = 0
+7:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_djtf2")
+7:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:8/0 = 0
+8:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_ts7h5")
+8:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:8/0 = 0
+9:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:8/0 = 0
+10:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:8/0 = 0
+12:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_q77np")
+12:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:8/0 = 0
+13:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7r0oi")
+13:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:8/0 = 0
+14:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7r0oi")
+14:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:8/0 = 0
+15:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7r0oi")
+15:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:8/0 = 0
+17:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_j7wsu")
+17:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:8/0 = 0
+18:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_j7wsu")
+18:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:8/0 = 0
+19:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_fpotq")
+19:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+20:8/0 = 0
+20:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_fpotq")
+20:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:9/0 = 0
+0:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_m4i6d")
+0:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:9/0 = 0
+1:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_lejex")
+2:9/0 = 0
+2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:9/0 = 0
+3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:9/0 = 0
+4:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:9/0 = 0
+6:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:9/0 = 0
+7:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:9/0 = 0
+8:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:9/0 = 0
+9:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:9/0 = 0
+10:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:9/0 = 0
+12:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_tu8bw")
+12:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:9/0 = 0
+13:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_a54jg")
+13:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:9/0 = 0
+14:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_6jw5p")
+14:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:9/0 = 0
+15:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_ydopy")
+15:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:9/0 = 0
+17:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_ibhgn")
+17:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:9/0 = 0
+18:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_8cefh")
+18:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:9/0 = 0
+19:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_6nqyg")
+19:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+20:9/0 = 0
+20:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_ibhgn")
+20:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:10/0 = 0
+0:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_n2qru")
+0:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:10/0 = 0
+1:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:10/0 = 0
+2:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:10/0 = 0
+6:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_upel8")
+6:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:10/0 = 0
+7:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_gp8ip")
+7:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:10/0 = 0
+8:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_ejg8t")
+8:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:10/0 = 0
+13:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_rhyts")
+13:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:10/0 = 0
+14:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_2ym7v")
+14:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:10/0 = 0
+15:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_rkcpw")
+15:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:10/0 = 0
+18:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_ib685")
+18:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:10/0 = 0
+19:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_njpaj")
+19:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+20:10/0 = 0
+20:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_njpaj")
+20:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_uj57h"]
+occlusion_layer_0/light_mask = 1
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_hjmvm")
+
+[node name="Main" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1107.0
+offset_top = -992.0
+offset_right = 7607.0
+offset_bottom = 999.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1wyto")
+stretch_mode = 1
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+texture_filter = 1
+position = Vector2(-2, 0)
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAAAAAgAAAAHAAgAAAAAAAkAAAAHAAkAAAABAAgAAAAHAAgAAAABAAkAAAAHAAkAAAACAAgAAAAHAAgAAAACAAkAAAAHAAkAAAADAAgAAAAHAAgAAAADAAkAAAAHAAkAAAAEAAgAAAAHAAgAAAAEAAkAAAAHAAkAAAAFAAgAAAAHAAgAAAAFAAkAAAAHAAkAAAAGAAgAAAAHAAgAAAAGAAkAAAAHAAkAAAAHAAgAAAAHAAgAAAAHAAkAAAAHAAkAAAAIAAgAAAAHAAgAAAANAAgAAAAHAAgAAAAOAAgAAAAHAAgAAAAOAAkAAAAHAAkAAAAPAAgAAAAHAAgAAAAPAAkAAAAHAAkAAAAQAAgAAAAHAAgAAAAQAAkAAAAHAAkAAAARAAgAAAAHAAgAAAARAAkAAAAHAAkAAAASAAgAAAAHAAgAAAASAAkAAAAHAAkAAAATAAgAAAAHAAgAAAATAAkAAAAHAAkAAAAUAAgAAAAHAAgAAAAUAAkAAAAHAAkAAAAVAAgAAAAHAAgAAAAVAAkAAAAHAAkAAAAWAAgAAAAHAAgAAAAWAAkAAAAHAAkAAAAXAAgAAAAHAAgAAAAXAAkAAAAHAAkAAAAYAAgAAAAHAAgAAAAYAAkAAAAHAAkAAAAZAAgAAAAHAAgAAAAZAAkAAAAHAAkAAAAaAAgAAAAHAAgAAAAaAAkAAAAHAAkAAAAbAAgAAAAHAAgAAAAbAAkAAAAHAAkAAAAcAAgAAAAHAAgAAAAcAAkAAAAHAAkAAAAdAAgAAAAHAAgAAAAdAAkAAAAHAAkAAAAeAAgAAAAHAAgAAAAeAAkAAAAHAAkAAAAfAAgAAAAHAAgAAAAfAAkAAAAHAAkAAAAgAAgAAAAHAAgAAAAgAAkAAAAHAAkAAAAhAAgAAAAHAAgAAAAhAAkAAAAHAAkAAAAiAAgAAAAHAAgAAAAiAAkAAAAHAAkAAAAjAAgAAAAHAAgAAAAjAAkAAAAHAAkAAAAkAAgAAAAHAAgAAAAkAAkAAAAHAAkAAAAlAAgAAAAHAAgAAAAlAAkAAAAHAAkAAAAmAAgAAAAHAAgAAAAmAAkAAAAHAAkAAAAnAAgAAAAHAAgAAAAnAAkAAAAHAAkAAAAoAAgAAAAHAAgAAAAoAAkAAAAHAAkAAAApAAgAAAAHAAgAAAApAAkAAAAHAAkAAAAqAAgAAAAHAAgAAAAqAAkAAAAHAAkAAAArAAgAAAAHAAgAAAArAAkAAAAHAAkAAAAsAAgAAAAHAAgAAAAsAAkAAAAHAAkAAAABAAoAAAAHAAkAAAABAAsAAAAHAAkAAAACAAoAAAAHAAkAAAACAAsAAAAHAAkAAAADAAoAAAAHAAkAAAADAAsAAAAHAAkAAAAEAAoAAAAHAAkAAAAEAAsAAAAHAAkAAAAFAAoAAAAHAAkAAAAFAAsAAAAHAAkAAAAGAAoAAAAHAAkAAAAGAAsAAAAHAAkAAAAHAAoAAAAHAAkAAAAHAAsAAAAHAAkAAAAIAAsAAAAHAAkAAAAJAAoAAAAHAAkAAAAJAAsAAAAHAAkAAAAKAAoAAAAHAAkAAAAKAAsAAAAHAAkAAAALAAoAAAAHAAkAAAALAAsAAAAHAAkAAAAMAAoAAAAHAAkAAAAMAAsAAAAHAAkAAAANAAoAAAAHAAkAAAANAAsAAAAHAAkAAAAOAAoAAAAHAAkAAAAOAAsAAAAHAAkAAAAPAAoAAAAHAAkAAAAPAAsAAAAHAAkAAAAQAAoAAAAHAAkAAAAQAAsAAAAHAAkAAAARAAoAAAAHAAkAAAARAAsAAAAHAAkAAAASAAoAAAAHAAkAAAASAAsAAAAHAAkAAAATAAoAAAAHAAkAAAATAAsAAAAHAAkAAAAUAAoAAAAHAAkAAAAUAAsAAAAHAAkAAAAVAAoAAAAHAAkAAAAVAAsAAAAHAAkAAAAWAAoAAAAHAAkAAAAWAAsAAAAHAAkAAAAXAAoAAAAHAAkAAAAXAAsAAAAHAAkAAAAYAAoAAAAHAAkAAAAYAAsAAAAHAAkAAAAZAAoAAAAHAAkAAAAZAAsAAAAHAAkAAAAaAAoAAAAHAAkAAAAaAAsAAAAHAAkAAAAbAAoAAAAHAAkAAAAbAAsAAAAHAAkAAAAcAAoAAAAHAAkAAAAcAAsAAAAHAAkAAAAdAAoAAAAHAAkAAAAdAAsAAAAHAAkAAAAeAAoAAAAHAAkAAAAeAAsAAAAHAAkAAAAfAAoAAAAHAAkAAAAfAAsAAAAHAAkAAAAgAAoAAAAHAAkAAAAgAAsAAAAHAAkAAAAhAAoAAAAHAAkAAAAhAAsAAAAHAAkAAAAiAAoAAAAHAAkAAAAiAAsAAAAHAAkAAAAjAAoAAAAHAAkAAAAjAAsAAAAHAAkAAAAkAAoAAAAHAAkA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AAD5/w0AAAAHAAkAAAD4/w0AAAAHAAkAAAD3/w0AAAAHAAkAAAD2/w0AAAAHAAkAAAD1/w0AAAAHAAkAAAD0/w0AAAAHAAkAAADz/w0AAAAHAAkAAADy/w0AAAAHAAkAAADx/w0AAAAHAAkAAADw/w0AAAAHAAkAAADv/w0AAAAHAAkAAADu/w0AAAAHAAkAAADt/w0AAAAHAAkAAADt/wwAAAAHAAkAAADs/wwAAAAHAAkAAADr/wwAAAAHAAkAAADq/wwAAAAHAAkAAADq/wsAAAAHAAkAAADq/woAAAAHAAkAAADp/woAAAAHAAkAAADp/wkAAAAHAAkAAADq/wkAAAAHAAkAAADr/wkAAAAHAAkAAADs/wkAAAAHAAkAAADt/wkAAAAHAAkAAADu/wkAAAAHAAkAAADv/wkAAAAHAAkAAADw/wkAAAAHAAkAAADx/wkAAAAHAAkAAADy/wkAAAAHAAkAAADz/wkAAAAHAAkAAAD0/wkAAAAHAAkAAAD1/wkAAAAHAAkAAAD2/wkAAAAHAAkAAAD3/wkAAAAHAAkAAAD4/wkAAAAHAAkAAAD5/wkAAAAHAAkAAAD6/woAAAAHAAkAAAD7/woAAAAHAAkAAAD8/woAAAAHAAkAAAD9/woAAAAHAAkAAAD+/wkAAAAHAAkAAAD9/wkAAAAHAAkAAAD8/wkAAAAHAAkAAAD7/wkAAAAHAAkAAAD6/wkAAAAHAAkAAADz/woAAAAHAAkAAADy/woAAAAHAAkAAADx/woAAAAHAAkAAADw/woAAAAHAAkAAADv/woAAAAHAAkAAADu/woAAAAHAAkAAADt/woAAAAHAAkAAADs/woAAAAHAAkAAADr/woAAAAHAAkAAAD0/woAAAAHAAkAAAD1/woAAAAHAAkAAAD2/woAAAAHAAkAAAD3/woAAAAHAAkAAAD4/woAAAAHAAkAAAD5/woAAAAHAAkAAAD//wsAAAAHAAkAAAD//wwAAAAHAAkAAAD8/wwAAAAHAAkAAAD7/wwAAAAHAAkAAAD6/wwAAAAHAAkAAAD5/wwAAAAHAAkAAAD4/wwAAAAHAAkAAAD3/wwAAAAHAAkAAAD3/wsAAAAHAAkAAAD2/wsAAAAHAAkAAAD1/wsAAAAHAAkAAAD0/wsAAAAHAAkAAADz/wsAAAAHAAkAAADy/wsAAAAHAAkAAADx/wsAAAAHAAkAAADw/wsAAAAHAAkAAADv/wsAAAAHAAkAAADu/wsAAAAHAAkAAADu/wwAAAAHAAkAAADp/wsAAAAHAAkAAADr/wsAAAAHAAkAAADs/wsAAAAHAAkAAADt/wsAAAAHAAkAAAD4/wsAAAAHAAkAAAD5/wsAAAAHAAkAAAD6/wsAAAAHAAkAAAD7/wsAAAAHAAkAAAD8/wsAAAAHAAkAAAD9/wsAAAAHAAkAAAD//w0AAAAHAAkAAAD+/w0AAAAHAAkAAAD2/wwAAAAHAAkAAAD1/wwAAAAHAAkAAAD0/wwAAAAHAAkAAADz/wwAAAAHAAkAAADy/wwAAAAHAAkAAADx/wwAAAAHAAkAAADw/wwAAAAHAAkAAADv/wwAAAAHAAkAAADs/w0AAAAHAAkAAADr/w0AAAAHAAkAAADq/w0AAAAHAAkAAADp/w0AAAAHAAkAAADp/wwAAAAHAAkAAAAtAAgAAAAHAAgAAAAuAAgAAAAHAAgAAAAvAAgAAAAHAAgAAAAwAAgAAAAHAAgAAAAxAAgAAAAHAAgAAAAyAAgAAAAHAAgAAAAzAAgAAAAHAAgAAAA0AAgAAAAHAAgAAAA1AAgAAAAHAAgAAAA2AAgAAAAHAAgAAAA3AAgAAAAHAAgAAAA4AAgAAAAHAAgAAAA5AAgAAAAHAAgAAAA6AAgAAAAHAAgAAAA7AAgAAAAHAAgAAAA8AAgAAAAHAAgAAAA9AAgAAAAHAAgAAAA+AAgAAAAHAAgAAAA/AAgAAAAHAAgAAABAAAgAAAAHAAgAAABBAAgAAAAHAAgAAABCAAgAAAAHAAgAAABDAAgAAAAHAAgAAABEAAgAAAAHAAgAAABFAAgAAAAHAAgAAABGAAgAAAAHAAgAAABHAAgAAAAHAAgAAABIAAgAAAAHAAgAAABJAAgAAAAHAAgAAABKAAgAAAAHAAgAAABLAAgAAAAHAAgAAABMAAgAAAAHAAgAAABNAAgAAAAHAAgAAABOAAgAAAAHAAgAAABPAAgAAAAHAAgAAABQAAgAAAAHAAgAAABRAAgAAAAHAAgAAABSAAgAAAAHAAgAAABTAAgAAAAHAAgAAABUAAgAAAAHAAgAAABVAAgAAAAHAAgAAABWAAgAAAAHAAgAAABXAAgAAAAHAAgAAABYAAgAAAAHAAgAAABZAAgAAAAHAAgAAABaAAgAAAAHAAgAAABbAAgAAAAHAAgAAABcAAgAAAAHAAgAAABdAAgAAAAHAAgAAABeAAgAAAAHAAgAAABfAAgAAAAHAAgAAABgAAgAAAAHAAgAAABhAAgAAAAHAAgAAABiAAgAAAAHAAgAAABjAAgAAAAHAAgAAABkAAgAAAAHAAgAAABlAAgAAAAHAAgAAABmAAgAAAAHAAgAAABnAAgAAAAHAAgAAABoAAgAAAAHAAgAAABpAAgAAAAHAAgAAABqAAgAAAAHAAgAAABrAAgAAAAHAAgAAABsAAgAAAAHAAgAAABtAAgAAAAHAAgAAABuAAgAAAAHAAgAAABvAAgAAAAHAAgAAABwAAgAAAAHAAgAAABxAAgAAAAHAAgAAAByAAgAAAAHAAgAAABzAAgAAAAHAAgAAAB0AAgAAAAHAAgAAAB1AAgAAAAHAAgAAAB2AAgAAAAHAAgAAAB3AAgAAAAHAAgAAAB4AAgAAAAHAAgAAAB5AAgAAAAHAAgAAAB6AAgAAAAHAAgAAAB7AAgAAAAHAAgAAAB8AAgAAAAHAAgAAAB9AAgAAAAHAAgAAAB+AAgAAAAHAAgAAAB/AAgAAAAHAAgAAACAAAgAAAAHAAgAAACBAAgAAAAHAAgAAACCAAgAAAAHAAgAAACDAAgAAAAHAAgAAACEAAgAAAAHAAgAAACFAAgAAAAHAAgAAACGAAgAAAAHAAgAAACHAAgAAAAHAAgAAACIAAgAAAAHAAgAAACJAAgAAAAHAAgAAACKAAgAAAAHAAgAAACLAAgAAAAHAAgAAACMAAgAAAAHAAgAAACNAAgAAAAHAAgAAACOAAgAAAAHAAgAAACPAAgAAAAHAAgAAACQAAgAAAAHAAgAAACRAAgAAAAHAAgAAACSAAgAAAAHAAgAAACTAAgAAAAHAAgAAACUAAgAAAAHAAgAAACVAAgAAAAHAAgAAACWAAgAAAAHAAgAAACXAAgAAAAHAAgAAACYAAgAAAAHAAgAAACZAAgAAAAHAAgAAACaAAgAAAAHAAgAAACbAAgAAAAHAAgAAACcAAgAAAAHAAgAAACdAAgAAAAHAAgAAAAuAAkAAAAHAAkAAAAtAAkAAAAHAAkAAAAtAAoAAAAHAAkAAAAtAAsAAAAHAAkAAAAtAAwAAAAHAAkAAAAtAA0AAAAHAAkAAAAuAA0AAAAHAAkAAAAuAAwAAAAHAAkAAAAuAAsAAAAHAAkAAAAuAAoAAAAHAAkAAAAvAAoAAAAHAAkAAAAvAAkAAAAHAAkAAAAwAAkAAAAHAAkAAAAwAAoAAAAHAAkAAAAwAAsAAAAHAAkAAAAvAAsAAAAHAAkAAAAvAAwAAAAHAAkAAAAvAA0AAAAHAAkAAAAwAA0AAAAHAAkAAAAwAAwAAAAHAAkAAAAxAAwAAAAHAAkAAAAxAAsAAAAHAAkAAAAxAAoAAAAHAAkAAAAxAAkAAAAHAAkAAAAyAAkAAAAHAAkAAAAyAAoAAAAHAAkAAAAyAAsAAAAHAAkAAAAyAAwAAAAHAAkAAAAyAA0AAAAHAAkAAAAxAA0AAAAHAAkAAAAzAA0AAAAHAAkAAAAzAAwAAAAHAAkAAAAzAAsAAAAHAAkAAAAzAAoAAAAHAAkAAAAzAAkAAAAHAAkAAAA0AAkAAAAHAAkAAAA0AAoAAAAHAAkAAAA0AAsAAAAHAAkAAAA0AAwAAAAHAAkAAAA0AA0AAAAHAAkAAAA1AA0AAAAHAAkAAAA1AAwAAAAHAAkAAAA1AAsAAAAHAAkAAAA1AAoAAAAHAAkAAAA1AAkAAAAHAAkAAAA2AAkAAAAHAAkAAAA2AAoAAAAHAAkAAAA2AAsAAAAHAAkAAAA2AAwAAAAHAAkAAAA2AA0AAAAHAAkAAAA3AA0AAAAHAAkAAAA3AAwAAAAHAAkAAAA3AAsAAAAHAAkAAAA3AAoAAAAHAAkAAAA3AAkAAAAHAAkAAAA4AAkAAAAHAAkAAAA4AAoAAAAHAAkAAAA4AAsAAAAHAAkAAAA4AAwAAAAHAAkAAAA4AA0AAAAHAAkAAAA5AA0AAAAHAAkAAAA5AAwAAAAHAAkAAAA5AAsAAAAHAAkAAAA5AAoAAAAHAAkAAAA5AAkAAAAHAAkAAAA6AAkAAAAHAAkAAAA6AAoAAAAHAAkAAAA6AAsAAAAHAAkAAAA6AAwAAAAHAAkAAAA6AA0AAAAHAAkAAAA7AA0AAAAHAAkAAAA7AAwAAAAHAAkAAAA7AAsAAAAHAAkAAAA7AAoAAAAHAAkAAAA7AAkAAAAHAAkAAAA8AAkAAAAHAAkAAAA8AAoAAAAHAAkAAAA8AAsAAAAHAAkAAAA8AAwAAAAHAAkAAAA8AA0AAAAHAAkAAAA9AA0AAAAHAAkAAAA9AAwAAAAHAAkAAAA9AAsAAAAHAAkAAAA9AAoAAAAHAAkAAAA9AAkAAAAHAAkAAAA+AAkAAAAHAAkAAAA+AAoAAAAHAAkAAAA+AAsAAAAHAAkAAAA+AAwAAAAHAAkAAAA+AA0AAAAHAAkAAAA/AA0AAAAHAAkAAAA/AAwAAAAHAAkAAAA/AAsAAAAHAAkAAAA/AAoAAAAHAAkAAAA/AAkAAAAHAAkAAABAAAkAAAAHAAkAAABAAAoAAAAHAAkAAABAAAsAAAAHAAkAAABAAAwAAAAHAAkAAABAAA0AAAAHAAkAAABBAA0AAAAHAAkAAABBAAwAAAAHAAkAAABBAAsAAAAHAAkAAABBAAoAAAAHAAkAAABBAAkAAAAHAAkAAABCAAkAAAAHAAkAAABCAAoAAAAHAAkAAABCAAsAAAAHAAkAAABCAAwAAAAHAAkAAABCAA0AAAAHAAkAAABDAA0AAAAHAAkAAABDAAwAAAAHAAkAAABDAAsAAAAHAAkAAABDAAoAAAAHAAkAAABDAAkAAAAHAAkAAABEAAkAAAAHAAkAAABEAAoAAAAHAAkAAABEAAsAAAAHAAkAAABEAAwAAAAHAAkAAABEAA0AAAAHAAkAAABFAA0AAAAHAAkAAABFAAwAAAAHAAkAAABFAAsAAAAHAAkAAABFAAoAAAAHAAkAAABFAAkAAAAHAAkAAABGAAkAAAAHAAkAAABGAAoAAAAHAAkAAABGAAsAAAAHAAkAAABGAAwAAAAHAAkAAABGAA0AAAAHAAkAAABHAA0AAAAHAAkAAABHAAwAAAAHAAkAAABHAAsAAAAHAAkAAABHAAoAAAAHAAkAAABHAAkAAAAHAAkAAABIAAkAAAAHAAkAAABIAAoAAAAHAAkAAABIAAsAAAAHAAkAAABIAAwAAAAHAAkAAABIAA0AAAAHAAkAAABJAA0AAAAHAAkAAABJAAwAAAAHAAkAAABJAAsAAAAHAAkAAABJAAoAAAAHAAkAAABJAAkAAAAHAAkAAABKAAkAAAAHAAkAAABKAAoAAAAHAAkAAABKAAsAAAAHAAkAAABKAAwAAAAHAAkAAABKAA0AAAAHAAkAAABLAA0AAAAHAAkAAABLAAwAAAAHAAkAAABLAAsAAAAHAAkAAABLAAoAAAAHAAkAAABLAAkAAAAHAAkAAABMAAkAAAAHAAkAAABMAAoAAAAHAAkAAABMAAsAAAAHAAkAAABMAAwAAAAHAAkAAABMAA0AAAAHAAkAAABNAA0AAAAHAAkAAABNAAwAAAAHAAkAAABNAAsAAAAHAAkAAABNAAoAAAAHAAkAAABNAAkAAAAHAAkAAABOAAkAAAAHAAkAAABOAAoAAAAHAAkAAABOAAsAAAAHAAkAAABOAAwAAAAHAAkAAABOAA0AAAAHAAkAAABPAA0AAAAHAAkAAABPAAwAAAAHAAkAAABPAAsAAAAHAAkAAABPAAoAAAAHAAkAAABPAAkAAAAHAAkAAABQAAkAAAAHAAkAAABQAAoAAAAHAAkAAABQAAsAAAAHAAkAAABQAAwAAAAHAAkAAABQAA0AAAAHAAkAAABRAA0AAAAHAAkAAABRAAwAAAAHAAkAAABRAAsAAAAHAAkAAABRAAoAAAAHAAkAAABRAAkAAAAHAAkAAABSAAkAAAAHAAkAAABSAAoAAAAHAAkAAABSAAsAAAAHAAkAAABSAAwAAAAHAAkAAABSAA0AAAAHAAkAAABTAA0AAAAHAAkAAABTAAwAAAAHAAkAAABTAAsAAAAHAAkAAABTAAoAAAAHAAkAAABTAAkAAAAHAAkAAABUAAkAAAAHAAkAAABUAAoAAAAHAAkAAABUAAsAAAAHAAkAAABUAAwAAAAHAAkAAABUAA0AAAAHAAkAAABVAA0AAAAHAAkAAABVAAwAAAAHAAkAAABVAAsAAAAHAAkAAABVAAoAAAAHAAkAAABVAAkAAAAHAAkAAABWAAkAAAAHAAkAAABWAAoAAAAHAAkAAABWAAsAAAAHAAkAAABWAAwAAAAHAAkAAABWAA0AAAAHAAkAAABXAA0AAAAHAAkAAABXAAwAAAAHAAkAAABXAAsAAAAHAAkAAABXAAoAAAAHAAkAAABXAAkAAAAHAAkAAABYAAkAAAAHAAkAAABYAAoAAAAHAAkAAABYAAsAAAAHAAkAAABYAAwAAAAHAAkAAABYAA0AAAAHAAkAAABZAA0AAAAHAAkAAABZAAwAAAAHAAkAAABZAAsAAAAHAAkAAABZAAoAAAAHAAkAAABZAAkAAAAHAAkAAABaAAkAAAAHAAkAAABaAAoAAAAHAAkAAABaAAsAAAAHAAkAAABaAAwAAAAHAAkAAABaAA0AAAAHAAkAAABbAA0AAAAHAAkAAABbAAwAAAAHAAkAAABbAAsAAAAHAAkAAABbAAoAAAAHAAkAAABbAAkAAAAHAAkAAABcAAkAAAAHAAkAAABcAAoAAAAHAAkAAABcAAsAAAAHAAkAAABcAAwAAAAHAAkAAABcAA0AAAAHAAkAAABdAA0AAAAHAAkAAABdAAwAAAAHAAkAAABdAAsAAAAHAAkAAABdAAoAAAAHAAkAAABdAAkAAAAHAAkAAABeAAkAAAAHAAkAAABeAAoAAAAHAAkAAABeAAsAAAAHAAkAAABeAAwAAAAHAAkAAABeAA0AAAAHAAkAAABfAA0AAAAHAAkAAABfAAwAAAAHAAkAAABfAAsAAAAHAAkAAABfAAoAAAAHAAkAAABfAAkAAAAHAAkAAABgAAkAAAAHAAkAAABgAAoAAAAHAAkAAABgAAsAAAAHAAkAAABgAAwAAAAHAAkAAABgAA0AAAAHAAkAAABhAA0AAAAHAAkAAABhAAwAAAAHAAkAAABhAAsAAAAHAAkAAABhAAoAAAAHAAkAAABhAAkAAAAHAAkAAABiAAkAAAAHAAkAAABiAAoAAAAHAAkAAABiAAsAAAAHAAkAAABiAAwAAAAHAAkAAABiAA0AAAAHAAkAAABjAA0AAAAHAAkAAABjAAwAAAAHAAkAAABjAAsAAAAHAAkAAABjAAoAAAAHAAkAAABjAAkAAAAHAAkAAABkAAkAAAAHAAkAAABkAAoAAAAHAAkAAABkAAsAAAAHAAkAAABkAAwAAAAHAAkAAABkAA0AAAAHAAkAAABlAA0AAAAHAAkAAABlAAwAAAAHAAkAAABlAAsAAAAHAAkAAABlAAoAAAAHAAkAAABlAAkAAAAHAAkAAABmAAkAAAAHAAkAAABmAAoAAAAHAAkAAABmAAsAAAAHAAkAAABmAAwAAAAHAAkAAABmAA0AAAAHAAkAAABnAA0AAAAHAAkAAABnAAwAAAAHAAkAAABnAAsAAAAHAAkAAABnAAoAAAAHAAkAAABnAAkAAAAHAAkAAABoAAkAAAAHAAkAAABoAAoAAAAHAAkAAABoAAsAAAAHAAkAAABoAAwAAAAHAAkAAABoAA0AAAAHAAkAAABpAA0AAAAHAAkAAABpAAwAAAAHAAkAAABpAAsAAAAHAAkAAABpAAoAAAAHAAkAAABpAAkAAAAHAAkAAABqAAkAAAAHAAkAAABqAAoAAAAHAAkAAABqAAsAAAAHAAkAAABqAAwAAAAHAAkAAABqAA0AAAAHAAkAAABrAA0AAAAHAAkAAABrAAwAAAAHAAkAAABrAAsAAAAHAAkAAABrAAoAAAAHAAkAAABrAAkAAAAHAAkAAABsAAkAAAAHAAkAAABsAAoAAAAHAAkAAABsAAsAAAAHAAkAAABsAAwAAAAHAAkAAABsAA0AAAAHAAkAAABtAA0AAAAHAAkAAABtAAwAAAAHAAkAAABtAAsAAAAHAAkAAABtAAoAAAAHAAkAAABtAAkAAAAHAAkAAABuAAkAAAAHAAkAAABuAAoAAAAHAAkAAABuAAsAAAAHAAkAAABuAAwAAAAHAAkAAABuAA0AAAAHAAkAAABvAA0AAAAHAAkAAABvAAwAAAAHAAkAAABvAAsAAAAHAAkAAABvAAoAAAAHAAkAAABvAAkAAAAHAAkAAABwAAkAAAAHAAkAAABwAAoAAAAHAAkAAABwAAsAAAAHAAkAAABwAAwAAAAHAAkAAABwAA0AAAAHAAkAAABxAA0AAAAHAAkAAABxAAwAAAAHAAkAAABxAAsAAAAHAAkAAABxAAoAAAAHAAkAAABxAAkAAAAHAAkAAAByAAkAAAAHAAkAAAByAAoAAAAHAAkAAAByAAsAAAAHAAkAAAByAAwAAAAHAAkAAAByAA0AAAAHAAkAAABzAA0AAAAHAAkAAABzAAwAAAAHAAkAAABzAAsAAAAHAAkAAABzAAoAAAAHAAkAAABzAAkAAAAHAAkAAAB0AAkAAAAHAAkAAAB0AAoAAAAHAAkAAAB0AAsAAAAHAAkAAAB0AAwAAAAHAAkAAAB0AA0AAAAHAAkAAAB1AA0AAAAHAAkAAAB1AAwAAAAHAAkAAAB1AAsAAAAHAAkAAAB1AAoAAAAHAAkAAAB1AAkAAAAHAAkAAAB2AAkAAAAHAAkAAAB2AAoAAAAHAAkAAAB2AAsAAAAHAAkAAAB2AAwAAAAHAAkAAAB2AA0AAAAHAAkAAAB3AA0AAAAHAAkAAAB3AAwAAAAHAAkAAAB3AAsAAAAHAAkAAAB3AAoAAAAHAAkAAAB3AAkAAAAHAAkAAAB4AAkAAAAHAAkAAAB4AAoAAAAHAAkAAAB4AAsAAAAHAAkAAAB4AAwAAAAHAAkAAAB4AA0AAAAHAAkAAAB5AA0AAAAHAAkAAAB5AAwAAAAHAAkAAAB5AAsAAAAHAAkAAAB5AAoAAAAHAAkAAAB5AAkAAAAHAAkAAAB6AAkAAAAHAAkAAAB6AAoAAAAHAAkAAAB6AAsAAAAHAAkAAAB6AAwAAAAHAAkAAAB6AA0AAAAHAAkAAAB7AA0AAAAHAAkAAAB7AAwAAAAHAAkAAAB7AAsAAAAHAAkAAAB7AAoAAAAHAAkAAAB7AAkAAAAHAAkAAAB8AAkAAAAHAAkAAAB8AAoAAAAHAAkAAAB8AAsAAAAHAAkAAAB8AAwAAAAHAAkAAAB8AA0AAAAHAAkAAAB9AA0AAAAHAAkAAAB9AAwAAAAHAAkAAAB9AAsAAAAHAAkAAAB9AAoAAAAHAAkAAAB9AAkAAAAHAAkAAAB+AAkAAAAHAAkAAAB+AAoAAAAHAAkAAAB+AAsAAAAHAAkAAAB+AAwAAAAHAAkAAAB+AA0AAAAHAAkAAAB/AA0AAAAHAAkAAAB/AAwAAAAHAAkAAAB/AAsAAAAHAAkAAAB/AAoAAAAHAAkAAAB/AAkAAAAHAAkAAACAAAkAAAAHAAkAAACAAAoAAAAHAAkAAACAAAsAAAAHAAkAAACAAAwAAAAHAAkAAACAAA0AAAAHAAkAAACBAA0AAAAHAAkAAACBAAwAAAAHAAkAAACBAAsAAAAHAAkAAACBAAoAAAAHAAkAAACBAAkAAAAHAAkAAACCAAkAAAAHAAkAAACCAAoAAAAHAAkAAACCAAsAAAAHAAkAAACCAAwAAAAHAAkAAACCAA0AAAAHAAkAAACDAA0AAAAHAAkAAACDAAwAAAAHAAkAAACDAAsAAAAHAAkAAACDAAoAAAAHAAkAAACDAAkAAAAHAAkAAACEAAkAAAAHAAkAAACEAAoAAAAHAAkAAACEAAsAAAAHAAkAAACEAAwAAAAHAAkAAACEAA0AAAAHAAkAAACFAA0AAAAHAAkAAACFAAwAAAAHAAkAAACFAAsAAAAHAAkAAACFAAoAAAAHAAkAAACFAAkAAAAHAAkAAACGAAkAAAAHAAkAAACGAAoAAAAHAAkAAACGAAsAAAAHAAkAAACGAAwAAAAHAAkAAACGAA0AAAAHAAkAAACHAA0AAAAHAAkAAACHAAwAAAAHAAkAAACHAAsAAAAHAAkAAACHAAoAAAAHAAkAAACHAAkAAAAHAAkAAACIAAkAAAAHAAkAAACIAAoAAAAHAAkAAACIAAsAAAAHAAkAAACIAAwAAAAHAAkAAACIAA0AAAAHAAkAAACJAA0AAAAHAAkAAACJAAwAAAAHAAkAAACJAAsAAAAHAAkAAACJAAoAAAAHAAkAAACJAAkAAAAHAAkAAACKAAkAAAAHAAkAAACKAAoAAAAHAAkAAACKAAsAAAAHAAkAAACKAAwAAAAHAAkAAACKAA0AAAAHAAkAAACLAA0AAAAHAAkAAACLAAwAAAAHAAkAAACLAAsAAAAHAAkAAACLAAoAAAAHAAkAAACLAAkAAAAHAAkAAACMAAkAAAAHAAkAAACMAAoAAAAHAAkAAACMAAsAAAAHAAkAAACMAAwAAAAHAAkAAACMAA0AAAAHAAkAAACNAA0AAAAHAAkAAACNAAwAAAAHAAkAAACNAAsAAAAHAAkAAACNAAoAAAAHAAkAAACNAAkAAAAHAAkAAACOAAkAAAAHAAkAAACOAAoAAAAHAAkAAACOAAsAAAAHAAkAAACOAAwAAAAHAAkAAACOAA0AAAAHAAkAAACPAA0AAAAHAAkAAACPAAwAAAAHAAkAAACPAAsAAAAHAAkAAACPAAoAAAAHAAkAAACPAAkAAAAHAAkAAACQAAkAAAAHAAkAAACQAAoAAAAHAAkAAACQAAsAAAAHAAkAAACQAAwAAAAHAAkAAACQAA0AAAAHAAkAAACRAA0AAAAHAAkAAACRAAwAAAAHAAkAAACRAAsAAAAHAAkAAACRAAoAAAAHAAkAAACRAAkAAAAHAAkAAACSAAkAAAAHAAkAAACSAAoAAAAHAAkAAACSAAsAAAAHAAkAAACSAAwAAAAHAAkAAACSAA0AAAAHAAkAAACTAA0AAAAHAAkAAACTAAwAAAAHAAkAAACTAAsAAAAHAAkAAACTAAoAAAAHAAkAAACTAAkAAAAHAAkAAACUAAkAAAAHAAkAAACUAAoAAAAHAAkAAACUAAsAAAAHAAkAAACUAAwAAAAHAAkAAACUAA0AAAAHAAkAAACVAA0AAAAHAAkAAACVAAwAAAAHAAkAAACVAAsAAAAHAAkAAACVAAoAAAAHAAkAAACVAAkAAAAHAAkAAACWAAkAAAAHAAkAAACWAAoAAAAHAAkAAACWAAsAAAAHAAkAAACWAAwAAAAHAAkAAACWAA0AAAAHAAkAAACXAA0AAAAHAAkAAACXAAwAAAAHAAkAAACXAAsAAAAHAAkAAACXAAoAAAAHAAkAAACXAAkAAAAHAAkAAACYAAkAAAAHAAkAAACYAAoAAAAHAAkAAACYAAsAAAAHAAkAAACYAAwAAAAHAAkAAACYAA0AAAAHAAkAAACZAA0AAAAHAAkAAACZAAwAAAAHAAkAAACZAAsAAAAHAAkAAACZAAoAAAAHAAkAAACZAAkAAAAHAAkAAACaAAkAAAAHAAkAAACaAAoAAAAHAAkAAACaAAsAAAAHAAkAAACaAAwAAAAHAAkAAACaAA0AAAAHAAkAAACbAA0AAAAHAAkAAACbAAwAAAAHAAkAAACbAAsAAAAHAAkAAACbAAoAAAAHAAkAAACbAAkAAAAHAAkAAACcAAkAAAAHAAkAAACcAAoAAAAHAAkAAACcAAsAAAAHAAkAAACcAAwAAAAHAAkAAACcAA0AAAAHAAkAAACdAA0AAAAHAAkAAACdAAwAAAAHAAkAAACdAAsAAAAHAAkAAACdAAoAAAAHAAkAAACdAAkAAAAHAAkAAAAIAAoAAAAHAAkAAAAIAAkAAAAHAAkAAAANAAkAAAAHAAkAAAAEAA4AAAAHAAkAAAALAA4AAAAHAAkAAAAKAA4AAAAHAAkAAAAJAA4AAAAHAAkAAAAIAA4AAAAHAAkAAAAHAA4AAAAHAAkAAAAGAA4AAAAHAAkAAAAFAA4AAAAHAAkAAAAEAA8AAAAHAAkAAAAEABAAAAAHAAkAAAAFABAAAAAHAAkAAAAGABAAAAAHAAkAAAAHABAAAAAHAAkAAAAIABAAAAAHAAkAAAAJABAAAAAHAAkAAAAKABAAAAAHAAkAAAALABAAAAAHAAkAAAALAA8AAAAHAAkAAAAKAA8AAAAHAAkAAAAJAA8AAAAHAAkAAAAIAA8AAAAHAAkAAAAHAA8AAAAHAAkAAAAGAA8AAAAHAAkAAAAFAA8AAAAHAAkAAAAOAA8AAAAHAAkAAAAOAA4AAAAHAAkAAAANAA4AAAAHAAkAAAAMAA4AAAAHAAkAAAAMAA8AAAAHAAkAAAAMABAAAAAHAAkAAAANABAAAAAHAAkAAAANAA8AAAAHAAkAAAAOABAAAAAHAAkAAAAPABAAAAAHAAkAAAAPAA8AAAAHAAkAAAAPAA4AAAAHAAkAAAAQAA4AAAAHAAkAAAAQAA8AAAAHAAkAAAAQABAAAAAHAAkAAAARABAAAAAHAAkAAAARAA8AAAAHAAkAAAARAA4AAAAHAAkAAAASAA4AAAAHAAkAAAASAA8AAAAHAAkAAAASABAAAAAHAAkAAAATABAAAAAHAAkAAAATAA8AAAAHAAkAAAATAA4AAAAHAAkAAAAUAA4AAAAHAAkAAAAUAA8AAAAHAAkAAAAUABAAAAAHAAkAAAAVABAAAAAHAAkAAAAVAA8AAAAHAAkAAAAVAA4AAAAHAAkAAAAWAA4AAAAHAAkAAAAWAA8AAAAHAAkAAAAWABAAAAAHAAkAAAAXABAAAAAHAAkAAAAXAA8AAAAHAAkAAAAXAA4AAAAHAAkAAAAYAA4AAAAHAAkAAAAYAA8AAAAHAAkAAAAYABAAAAAHAAkAAAAZABAAAAAHAAkAAAAZAA8AAAAHAAkAAAAZAA4AAAAHAAkAAAAaAA4AAAAHAAkAAAAaAA8AAAAHAAkAAAAaABAAAAAHAAkAAAAbABAAAAAHAAkAAAAbAA8AAAAHAAkAAAAbAA4AAAAHAAkAAAAcAA4AAAAHAAkAAAAcAA8AAAAHAAkAAAAcABAAAAAHAAkAAAAdABAAAAAHAAkAAAAdAA8AAAAHAAkAAAAdAA4AAAAHAAkAAAAeAA4AAAAHAAkAAAAeAA8AAAAHAAkAAAAeABAAAAAHAAkAAAAfABAAAAAHAAkAAAAfAA8AAAAHAAkAAAAfAA4AAAAHAAkAAAAgAA4AAAAHAAkAAAAgAA8AAAAHAAkAAAAgABAAAAAHAAkAAAAhABAAAAAHAAkAAAAhAA8AAAAHAAkAAAAhAA4AAAAHAAkAAAAiAA4AAAAHAAkAAAAiAA8AAAAHAAkAAAAiABAAAAAHAAkAAAAjABAAAAAHAAkAAAAjAA8AAAAHAAkAAAAjAA4AAAAHAAkAAAAkAA4AAAAHAAkAAAAkAA8AAAAHAAkAAAAkABAAAAAHAAkAAAAlABAAAAAHAAkAAAAlAA8AAAAHAAkAAAAlAA4AAAAHAAkAAAAmAA4AAAAHAAkAAAAmAA8AAAAHAAkAAAAmABAAAAAHAAkAAAAnABAAAAAHAAkAAAAnAA8AAAAHAAkAAAAnAA4AAAAHAAkAAAAoAA4AAAAHAAkAAAAoAA8AAAAHAAkAAAAoABAAAAAHAAkAAAApABAAAAAHAAkAAAApAA8AAAAHAAkAAAApAA4AAAAHAAkAAAAqAA4AAAAHAAkAAAAqAA8AAAAHAAkAAAAqABAAAAAHAAkAAAArABAAAAAHAAkAAAArAA8AAAAHAAkAAAArAA4AAAAHAAkAAAAsAA4AAAAHAAkAAAAsAA8AAAAHAAkAAAAsABAAAAAHAAkAAAAtABAAAAAHAAkAAAAtAA8AAAAHAAkAAAAtAA4AAAAHAAkAAAAuAA4AAAAHAAkAAAAuAA8AAAAHAAkAAAAuABAAAAAHAAkAAAAvABAAAAAHAAkAAAAvAA8AAAAHAAkAAAAvAA4AAAAHAAkAAAAwAA4AAAAHAAkAAAAwAA8AAAAHAAkAAAAwABAAAAAHAAkAAAAxABAAAAAHAAkAAAAxAA8AAAAHAAkAAAAxAA4AAAAHAAkAAAAyAA4AAAAHAAkAAAAyAA8AAAAHAAkAAAAyABAAAAAHAAkAAAAzABAAAAAHAAkAAAAzAA8AAAAHAAkAAAAzAA4AAAAHAAkAAAA0AA4AAAAHAAkAAAA0AA8AAAAHAAkAAAA0ABAAAAAHAAkAAAA1ABAAAAAHAAkAAAA1AA8AAAAHAAkAAAA1AA4AAAAHAAkAAAA2AA4AAAAHAAkAAAA2AA8AAAAHAAkAAAA2ABAAAAAHAAkAAAA3ABAAAAAHAAkAAAA3AA8AAAAHAAkAAAA3AA4AAAAHAAkAAAA4AA4AAAAHAAkAAAA4AA8AAAAHAAkAAAA4ABAAAAAHAAkAAAA5ABAAAAAHAAkAAAA5AA8AAAAHAAkAAAA5AA4AAAAHAAkAAAA6AA4AAAAHAAkAAAA6AA8AAAAHAAkAAAA6ABAAAAAHAAkAAAA7ABAAAAAHAAkAAAA7AA8AAAAHAAkAAAA7AA4AAAAHAAkAAAA8AA4AAAAHAAkAAAA8AA8AAAAHAAkAAAA8ABAAAAAHAAkAAAA9ABAAAAAHAAkAAAA9AA8AAAAHAAkAAAA9AA4AAAAHAAkAAAA+AA4AAAAHAAkAAAA+AA8AAAAHAAkAAAA+ABAAAAAHAAkAAAA/ABAAAAAHAAkAAAA/AA8AAAAHAAkAAAA/AA4AAAAHAAkAAABAAA4AAAAHAAkAAABAAA8AAAAHAAkAAABAABAAAAAHAAkAAABBABAAAAAHAAkAAABBAA8AAAAHAAkAAABBAA4AAAAHAAkAAABCAA4AAAAHAAkAAABCAA8AAAAHAAkAAABCABAAAAAHAAkAAABDABAAAAAHAAkAAABDAA8AAAAHAAkAAABDAA4AAAAHAAkAAABEAA4AAAAHAAkAAABEAA8AAAAHAAkAAABEABAAAAAHAAkAAABFABAAAAAHAAkAAABFAA8AAAAHAAkAAABFAA4AAAAHAAkAAABGAA4AAAAHAAkAAABGAA8AAAAHAAkAAABGABAAAAAHAAkAAABHABAAAAAHAAkAAABHAA8AAAAHAAkAAABHAA4AAAAHAAkAAABIAA4AAAAHAAkAAABIAA8AAAAHAAkAAABIABAAAAAHAAkAAABJABAAAAAHAAkAAABJAA8AAAAHAAkAAABJAA4AAAAHAAkAAABKAA4AAAAHAAkAAABKAA8AAAAHAAkAAABKABAAAAAHAAkAAABLABAAAAAHAAkAAABLAA8AAAAHAAkAAABLAA4AAAAHAAkAAABMAA4AAAAHAAkAAABMAA8AAAAHAAkAAABMABAAAAAHAAkAAABNABAAAAAHAAkAAABNAA8AAAAHAAkAAABNAA4AAAAHAAkAAABOAA4AAAAHAAkAAABOAA8AAAAHAAkAAABOABAAAAAHAAkAAABPABAAAAAHAAkAAABPAA8AAAAHAAkAAABPAA4AAAAHAAkAAABQAA4AAAAHAAkAAABQAA8AAAAHAAkAAABQABAAAAAHAAkAAABRABAAAAAHAAkAAABRAA8AAAAHAAkAAABRAA4AAAAHAAkAAABSAA4AAAAHAAkAAABSAA8AAAAHAAkAAABSABAAAAAHAAkAAABTABAAAAAHAAkAAABTAA8AAAAHAAkAAABTAA4AAAAHAAkAAABUAA4AAAAHAAkAAABUAA8AAAAHAAkAAABUABAAAAAHAAkAAABVABAAAAAHAAkAAABVAA8AAAAHAAkAAABVAA4AAAAHAAkAAABWAA4AAAAHAAkAAABWAA8AAAAHAAkAAABWABAAAAAHAAkAAABXABAAAAAHAAkAAABXAA8AAAAHAAkAAABXAA4AAAAHAAkAAABYAA4AAAAHAAkAAABYAA8AAAAHAAkAAABYABAAAAAHAAkAAABZABAAAAAHAAkAAABZAA8AAAAHAAkAAABZAA4AAAAHAAkAAABaAA4AAAAHAAkAAABaAA8AAAAHAAkAAABaABAAAAAHAAkAAABbABAAAAAHAAkAAABbAA8AAAAHAAkAAABbAA4AAAAHAAkAAABcAA4AAAAHAAkAAABcAA8AAAAHAAkAAABcABAAAAAHAAkAAABdABAAAAAHAAkAAABdAA8AAAAHAAkAAABdAA4AAAAHAAkAAABeAA4AAAAHAAkAAABeAA8AAAAHAAkAAABeABAAAAAHAAkAAABfABAAAAAHAAkAAABfAA8AAAAHAAkAAABfAA4AAAAHAAkAAABgAA4AAAAHAAkAAABgAA8AAAAHAAkAAABgABAAAAAHAAkAAABhABAAAAAHAAkAAABhAA8AAAAHAAkAAABhAA4AAAAHAAkAAABiAA4AAAAHAAkAAABiAA8AAAAHAAkAAABiABAAAAAHAAkAAABjABAAAAAHAAkAAABjAA8AAAAHAAkAAABjAA4AAAAHAAkAAABkAA4AAAAHAAkAAABkAA8AAAAHAAkAAABkABAAAAAHAAkAAABlABAAAAAHAAkAAABlAA8AAAAHAAkAAABlAA4AAAAHAAkAAABmAA4AAAAHAAkAAABmAA8AAAAHAAkAAABmABAAAAAHAAkAAABnABAAAAAHAAkAAABnAA8AAAAHAAkAAABnAA4AAAAHAAkAAABoAA4AAAAHAAkAAABoAA8AAAAHAAkAAABoABAAAAAHAAkAAABpABAAAAAHAAkAAABpAA8AAAAHAAkAAABpAA4AAAAHAAkAAABqAA4AAAAHAAkAAABqAA8AAAAHAAkAAABqABAAAAAHAAkAAABrABAAAAAHAAkAAABrAA8AAAAHAAkAAABrAA4AAAAHAAkAAABsAA4AAAAHAAkAAABsAA8AAAAHAAkAAABsABAAAAAHAAkAAABtABAAAAAHAAkAAABtAA8AAAAHAAkAAABtAA4AAAAHAAkAAABuAA4AAAAHAAkAAABuAA8AAAAHAAkAAABuABAAAAAHAAkAAABvABAAAAAHAAkAAABvAA8AAAAHAAkAAABvAA4AAAAHAAkAAABwAA4AAAAHAAkAAABwAA8AAAAHAAkAAABwABAAAAAHAAkAAABxABAAAAAHAAkAAABxAA8AAAAHAAkAAABxAA4AAAAHAAkAAAByAA4AAAAHAAkAAAByAA8AAAAHAAkAAAByABAAAAAHAAkAAABzABAAAAAHAAkAAABzAA8AAAAHAAkAAABzAA4AAAAHAAkAAAB0AA4AAAAHAAkAAAB0AA8AAAAHAAkAAAB0ABAAAAAHAAkAAAB1ABAAAAAHAAkAAAB1AA8AAAAHAAkAAAB1AA4AAAAHAAkAAAB2AA4AAAAHAAkAAAB2AA8AAAAHAAkAAAB2ABAAAAAHAAkAAAB3ABAAAAAHAAkAAAB3AA8AAAAHAAkAAAB3AA4AAAAHAAkAAAB4AA4AAAAHAAkAAAB4AA8AAAAHAAkAAAB4ABAAAAAHAAkAAAB5ABAAAAAHAAkAAAB5AA8AAAAHAAkAAAB5AA4AAAAHAAkAAAB6AA4AAAAHAAkAAAB6AA8AAAAHAAkAAAB6ABAAAAAHAAkAAAB7ABAAAAAHAAkAAAB7AA8AAAAHAAkAAAB7AA4AAAAHAAkAAAB8AA4AAAAHAAkAAAB8AA8AAAAHAAkAAAB8ABAAAAAHAAkAAAB9ABAAAAAHAAkAAAB9AA8AAAAHAAkAAAB9AA4AAAAHAAkAAAB+AA4AAAAHAAkAAAB+AA8AAAAHAAkAAAB+ABAAAAAHAAkAAAB/ABAAAAAHAAkAAAB/AA8AAAAHAAkAAAB/AA4AAAAHAAkAAACAAA4AAAAHAAkAAACAAA8AAAAHAAkAAACAABAAAAAHAAkAAACBABAAAAAHAAkAAACBAA8AAAAHAAkAAACBAA4AAAAHAAkAAACCAA4AAAAHAAkAAACCAA8AAAAHAAkAAACCABAAAAAHAAkAAACDABAAAAAHAAkAAACDAA8AAAAHAAkAAACDAA4AAAAHAAkAAACEAA4AAAAHAAkAAACEAA8AAAAHAAkAAACEABAAAAAHAAkAAACFABAAAAAHAAkAAACFAA8AAAAHAAkAAACFAA4AAAAHAAkAAACGAA4AAAAHAAkAAACGAA8AAAAHAAkAAACGABAAAAAHAAkAAACHABAAAAAHAAkAAACHAA8AAAAHAAkAAACHAA4AAAAHAAkAAACIAA4AAAAHAAkAAACIAA8AAAAHAAkAAACIABAAAAAHAAkAAACJABAAAAAHAAkAAACJAA8AAAAHAAkAAACJAA4AAAAHAAkAAACKAA4AAAAHAAkAAACKAA8AAAAHAAkAAACKABAAAAAHAAkAAACLABAAAAAHAAkAAACLAA8AAAAHAAkAAACLAA4AAAAHAAkAAACMAA4AAAAHAAkAAACMAA8AAAAHAAkAAACMABAAAAAHAAkAAACNABAAAAAHAAkAAACNAA8AAAAHAAkAAACNAA4AAAAHAAkAAACOAA4AAAAHAAkAAACOAA8AAAAHAAkAAACOABAAAAAHAAkAAACPABAAAAAHAAkAAACPAA8AAAAHAAkAAACPAA4AAAAHAAkAAACQAA4AAAAHAAkAAACQAA8AAAAHAAkAAACQABAAAAAHAAkAAACRABAAAAAHAAkAAACRAA8AAAAHAAkAAACRAA4AAAAHAAkAAACSAA4AAAAHAAkAAACSAA8AAAAHAAkAAACSABAAAAAHAAkAAACTABAAAAAHAAkAAACTAA8AAAAHAAkAAACTAA4AAAAHAAkAAACUAA4AAAAHAAkAAACUAA8AAAAHAAkAAACUABAAAAAHAAkAAACVABAAAAAHAAkAAACVAA8AAAAHAAkAAACVAA4AAAAHAAkAAACWAA4AAAAHAAkAAACWAA8AAAAHAAkAAACWABAAAAAHAAkAAACXABAAAAAHAAkAAACXAA8AAAAHAAkAAACXAA4AAAAHAAkAAACYAA4AAAAHAAkAAACYAA8AAAAHAAkAAACYABAAAAAHAAkAAACZABAAAAAHAAkAAACZAA8AAAAHAAkAAACZAA4AAAAHAAkAAACaAA4AAAAHAAkAAACaAA8AAAAHAAkAAACaABAAAAAHAAkAAACbABAAAAAHAAkAAACbAA8AAAAHAAkAAACbAA4AAAAHAAkAAACcAA4AAAAHAAkAAACcAA8AAAAHAAkAAACcABAAAAAHAAkAAACdABAAAAAHAAkAAACdAA8AAAAHAAkAAACdAA4AAAAHAAkAAAD+/w8AAAAHAAkAAAD+/w4AAAAHAAkAAAD9/w4AAAAHAAkAAAD8/w4AAAAHAAkAAAD7/w4AAAAHAAkAAAD6/w4AAAAHAAkAAAD5/w4AAAAHAAkAAAD4/w4AAAAHAAkAAAD3/w4AAAAHAAkAAAD2/w4AAAAHAAkAAAD1/w4AAAAHAAkAAAD0/w4AAAAHAAkAAADz/w4AAAAHAAkAAADy/w4AAAAHAAkAAADx/w4AAAAHAAkAAADw/w4AAAAHAAkAAADv/w4AAAAHAAkAAADu/w4AAAAHAAkAAADt/w4AAAAHAAkAAADs/w4AAAAHAAkAAADr/w4AAAAHAAkAAADq/w4AAAAHAAkAAADp/w4AAAAHAAkAAADp/w8AAAAHAAkAAADp/xAAAAAHAAkAAADq/xAAAAAHAAkAAADq/w8AAAAHAAkAAADr/w8AAAAHAAkAAADr/xAAAAAHAAkAAADs/xAAAAAHAAkAAADs/w8AAAAHAAkAAADt/w8AAAAHAAkAAADt/xAAAAAHAAkAAADu/xAAAAAHAAkAAADu/w8AAAAHAAkAAADv/w8AAAAHAAkAAADv/xAAAAAHAAkAAADw/xAAAAAHAAkAAADw/w8AAAAHAAkAAADx/w8AAAAHAAkAAADx/xAAAAAHAAkAAADy/xAAAAAHAAkAAADy/w8AAAAHAAkAAADz/w8AAAAHAAkAAADz/xAAAAAHAAkAAAD0/xAAAAAHAAkAAAD0/w8AAAAHAAkAAAD1/w8AAAAHAAkAAAD1/xAAAAAHAAkAAAD2/xAAAAAHAAkAAAD2/w8AAAAHAAkAAAD3/w8AAAAHAAkAAAD3/xAAAAAHAAkAAAD4/xAAAAAHAAkAAAD4/w8AAAAHAAkAAAD5/w8AAAAHAAkAAAD5/xAAAAAHAAkAAAD6/xAAAAAHAAkAAAD6/w8AAAAHAAkAAAD7/w8AAAAHAAkAAAD7/xAAAAAHAAkAAAD8/xAAAAAHAAkAAAD8/w8AAAAHAAkAAAD9/w8AAAAHAAkAAAD9/xAAAAAHAAkAAAD+/xAAAAAHAAkAAAD//xAAAAAHAAkAAAD//w8AAAAHAAkAAAD//w4AAAAHAAkAAAAAAA4AAAAHAAkAAAAAAA8AAAAHAAkAAAAAABAAAAAHAAkAAAABABAAAAAHAAkAAAABAA8AAAAHAAkAAAABAA4AAAAHAAkAAAACAA4AAAAHAAkAAAACAA8AAAAHAAkAAAACABAAAAAHAAkAAAADABAAAAAHAAkAAAADAA8AAAAHAAkAAAADAA4AAAAHAAkAAAAPAAYAAAASAAkAAAAPAAcAAAASAAoAAAAQAAYAAAATAAkAAAAQAAcAAAATAAoAAAARAAQAAAASAAkAAAARAAUAAAASAAoAAAASAAQAAAATAAkAAAASAAUAAAATAAoAAAARAAYAAAASAAkAAAARAAcAAAASAAoAAAASAAYAAAATAAkAAAASAAcAAAATAAoAAAATAAQAAAASAAkAAAATAAUAAAASAAoAAAAUAAQAAAATAAkAAAAUAAUAAAATAAoAAAATAAYAAAASAAkAAAATAAcAAAASAAoAAAAUAAYAAAATAAkAAAAUAAcAAAATAAoAAAAVAAYAAAASAAkAAAAVAAcAAAASAAoAAAAWAAYAAAATAAkAAAAWAAcAAAATAAoAAAAZAAMAAAARAAgAAAAaAAMAAAATAAgAAAAbAAEAAAARAAgAAAAcAAEAAAASAAgAAAAdAAEAAAASAAgAAAAeAAEAAAATAAgAAAAfAAMAAAARAAgAAAAgAAMAAAATAAgAAAAlAAYAAAASAAkAAAAlAAcAAAASAAoAAAAmAAYAAAATAAkAAAAmAAcAAAATAAoAAAAAAP//AAAUAAkAAAAAAP7/AAAUAAkAAAAAAP3/AAAUAAkAAAAAAPz/AAAUAAkAAAAAAPv/AAAUAAkAAAAAAPr/AAAUAAgAAACLAAcAAAAUAAoAAACLAPr/AAAUAAgAAACLAPv/AAAUAAkAAACLAPz/AAAUAAkAAACLAP3/AAAUAAkAAACLAP7/AAAUAAkAAACLAP//AAAUAAkAAACLAAAAAAAUAAkAAACLAAEAAAAUAAkAAACLAAIAAAAUAAkAAACLAAMAAAAUAAkAAACLAAQAAAAUAAkAAACLAAUAAAAUAAkAAACLAAYAAAAUAAkAAAAJAAkAAAAHAAkAAAAKAAkAAAAHAAkAAAALAAkAAAAHAAkAAAAMAAkAAAAHAAkAAAAJAAgAAAAHAAgAAAAKAAgAAAAHAAgAAAALAAgAAAAHAAgAAAAMAAgAAAAHAAgAAAApAAMAAAATAAgAAAAuAAMAAAARAAgAAAAyAAYAAAASAAkAAAAyAAcAAAASAAoAAAAzAAYAAAATAAkAAAAzAAcAAAATAAoAAAAoAP3/AAARAAgAAAApAP3/AAASAAgAAAAqAP3/AAATAAgAAAAiAPv/AAASAAgAAAAjAPv/AAASAAgAAAAkAPv/AAATAAgAAAAfAPv/AAASAAgAAAAgAPv/AAASAAgAAAAhAPv/AAASAAgAAAAcAPv/AAARAAgAAAAdAPv/AAASAAgAAAAeAPv/AAASAAgAAAAyAAEAAAARAAgAAAAzAAEAAAASAAgAAAA0AAEAAAATAAgAAAA2AP//AAARAAgAAAA3AP//AAASAAgAAAA4AP//AAATAAgAAAAyAP3/AAARAAkAAAAuAP3/AAARAAkAAAA8APn/AAARAAQAAAA8APr/AAARAAUAAAA8APv/AAARAAYAAAA9APr/AAASAAUAAAA9APv/AAASAAYAAAA+APv/AAATAAYAAAA8APz/AAARAAQAAAA8AP3/AAARAAUAAAA8AP7/AAARAAYAAAA9APz/AAASAAQAAAA9AP3/AAASAAUAAAA9AP7/AAASAAYAAAA+APz/AAATAAQAAAA+AP3/AAAUAAUAAAA+AP7/AAATAAYAAAA8AP//AAARAAQAAAA8AAAAAAARAAUAAAA8AAEAAAARAAYAAAA9AP//AAASAAQAAAA9AAAAAAASAAUAAAA9AAEAAAASAAYAAAA+AP//AAATAAQAAAA+AAAAAAATAAUAAAA+AAEAAAATAAYAAAA8AAIAAAARAAQAAAA8AAMAAAARAAUAAAA8AAQAAAARAAYAAAA9AAIAAAASAAQAAAA9AAMAAAASAAUAAAA9AAQAAAASAAYAAAA+AAIAAAATAAQAAAA+AAMAAAATAAUAAAA+AAQAAAATAAYAAABGAAUAAAAUAAUAAABHAAUAAAAVAAUAAABIAAUAAAAUAAUAAABJAAUAAAAVAAUAAABIAAYAAAAUAAUAAABJAAYAAAAVAAUAAABIAAcAAAAUAAUAAABJAAcAAAAVAAUAAABGAAYAAAAUAAUAAABHAAYAAAAVAAUAAABGAAcAAAAUAAUAAABHAAcAAAAVAAUAAABMAAIAAAAUAAUAAABNAAIAAAAVAAUAAABOAAIAAAAUAAUAAABPAAIAAAAVAAUAAABOAAEAAAAUAAUAAABPAAEAAAAVAAUAAABOAAAAAAAUAAUAAABPAAAAAAAVAAUAAABQAAEAAAAUAAUAAABRAAEAAAAVAAUAAABQAAAAAAAUAAUAAABRAAAAAAAVAAUAAABQAAIAAAAUAAUAAABRAAIAAAAVAAUAAABSAAIAAAAUAAUAAABTAAIAAAAVAAUAAABKAP3/AAAUAAUAAABLAP3/AAAVAAUAAABIAP3/AAAUAAUAAABJAP3/AAAVAAUAAABGAP3/AAAUAAUAAABHAP3/AAAVAAUAAABEAP3/AAAUAAUAAABFAP3/AAAVAAUAAABCAP3/AAAUAAUAAABDAP3/AAAVAAUAAABAAP3/AAAUAAUAAABBAP3/AAAVAAUAAAA/AP3/AAAVAAUAAABVAP7/AAAUAAUAAABWAP7/AAAVAAUAAABXAP7/AAAUAAUAAABYAP7/AAAVAAUAAABZAP7/AAAUAAUAAABaAP7/AAAVAAUAAABbAP7/AAAUAAUAAABcAP7/AAAVAAUAAABdAP7/AAAUAAUAAABeAP7/AAAVAAUAAABdAP3/AAAUAAUAAABeAP3/AAAVAAUAAABdAPz/AAAUAAUAAABeAPz/AAAVAAUAAABeAPv/AAAVAAUAAABfAPn/AAAUAAUAAABgAPn/AAAVAAUAAABfAPr/AAAUAAUAAABgAPr/AAAVAAUAAABfAPv/AAAUAAUAAABgAPv/AAAVAAUAAABfAPz/AAAUAAUAAABgAPz/AAAVAAUAAABfAP3/AAAUAAUAAABgAP3/AAAVAAUAAABfAP7/AAAUAAUAAABgAP7/AAAVAAUAAABhAP7/AAAUAAUAAABiAP7/AAAUAAUAAABjAP7/AAAVAAUAAABnAAEAAAAUAAUAAABoAAEAAAAVAAUAAABjAAMAAAAVAAUAAABeAAUAAAAUAAUAAABfAAUAAAAUAAUAAABgAAUAAAAUAAUAAABgAAYAAAAUAAUAAABgAAcAAAAUAAUAAABfAAcAAAAUAAUAAABeAAcAAAAUAAUAAABeAAYAAAAUAAUAAABfAAYAAAAUAAUAAABdAAcAAAAUAAUAAABcAAcAAAAUAAUAAABkAAMAAAAUAAUAAABvAAYAAAANAAUAAABvAAcAAAANAAYAAABwAAYAAAAOAAUAAABwAAcAAAAOAAYAAABxAAQAAAANAAUAAABxAAUAAAANAAYAAAByAAQAAAAOAAUAAAByAAUAAAAOAAYAAABxAAYAAAANAAUAAABxAAcAAAANAAYAAAByAAYAAAAOAAUAAAByAAcAAAAOAAYAAABzAAYAAAANAAUAAABzAAcAAAANAAYAAAB0AAYAAAAOAAUAAAB0AAcAAAAOAAYAAABzAAQAAAANAAUAAABzAAUAAAANAAYAAAB0AAQAAAAOAAUAAAB0AAUAAAAOAAYAAABzAAIAAAANAAUAAABzAAMAAAANAAYAAAB0AAIAAAAOAAUAAAB0AAMAAAAOAAYAAAB1AAIAAAANAAUAAAB1AAMAAAANAAYAAAB2AAIAAAAOAAUAAAB2AAMAAAAOAAYAAAB1AAAAAAANAAUAAAB1AAEAAAANAAYAAAB2AAAAAAAOAAUAAAB2AAEAAAAOAAYAAAB1AAQAAAANAAUAAAB1AAUAAAANAAYAAAB2AAQAAAAOAAUAAAB2AAUAAAAOAAYAAAB1AAYAAAANAAUAAAB1AAcAAAANAAYAAAB2AAYAAAAOAAUAAAB2AAcAAAAOAAYAAAB3AAYAAAANAAUAAAB3AAcAAAANAAYAAAB4AAYAAAAOAAUAAAB4AAcAAAAOAAYAAAB3AAQAAAANAAUAAAB3AAUAAAANAAYAAAB4AAQAAAAOAAUAAAB4AAUAAAAOAAYAAAB3AAIAAAANAAUAAAB3AAMAAAANAAYAAAB4AAIAAAAOAAUAAAB4AAMAAAAOAAYAAAB3AAAAAAANAAUAAAB3AAEAAAANAAYAAAB4AAAAAAAOAAUAAAB4AAEAAAAOAAYAAAB3AP7/AAANAAUAAAB3AP//AAANAAYAAAB4AP7/AAAOAAUAAAB4AP//AAAOAAYAAAB5AP7/AAANAAUAAAB5AP//AAANAAYAAAB6AP7/AAAOAAUAAAB6AP//AAAOAAYAAAB7AP7/AAANAAUAAAB7AP//AAANAAYAAAB8AP7/AAAOAAUAAAB8AP//AAAOAAYAAAB7AAAAAAANAAUAAAB7AAEAAAANAAYAAAB8AAAAAAAOAAUAAAB8AAEAAAAOAAYAAAB5AAAAAAANAAUAAAB5AAEAAAANAAYAAAB6AAAAAAAOAAUAAAB6AAEAAAAOAAYAAAB5AAIAAAANAAUAAAB5AAMAAAANAAYAAAB6AAIAAAAOAAUAAAB6AAMAAAAOAAYAAAB7AAIAAAANAAUAAAB7AAMAAAANAAYAAAB8AAIAAAAOAAUAAAB8AAMAAAAOAAYAAAB7AAQAAAANAAUAAAB7AAUAAAANAAYAAAB8AAQAAAAOAAUAAAB8AAUAAAAOAAYAAAB5AAQAAAANAAUAAAB5AAUAAAANAAYAAAB6AAQAAAAOAAUAAAB6AAUAAAAOAAYAAAB5AAYAAAANAAUAAAB5AAcAAAANAAYAAAB6AAYAAAAOAAUAAAB6AAcAAAAOAAYAAAB7AAYAAAANAAUAAAB7AAcAAAANAAYAAAB8AAYAAAAOAAUAAAB8AAcAAAAOAAYAAAB7APz/AAANAAUAAAB7AP3/AAANAAYAAAB8APz/AAAOAAUAAAB8AP3/AAAOAAYAAAB5APz/AAANAAUAAAB5AP3/AAANAAYAAAB6APz/AAAOAAUAAAB6AP3/AAAOAAYAAAB7APr/AAANAAUAAAB7APv/AAANAAYAAAB8APr/AAAOAAUAAAB8APv/AAAOAAYAAAAoAAMAAAARAAgAAAAvAAMAAAATAAgAAAA=")
+tile_set = SubResource("TileSet_uj57h")
+
+[node name="maincharacter" parent="." instance=ExtResource("3_og27v")]
+position = Vector2(-215, -4)
+
+[node name="Camera2D" type="Camera2D" parent="maincharacter"]
+position = Vector2(300, 333)
+
+[node name="SonidoPrincipal" type="AudioStreamPlayer2D" parent="maincharacter"]
+position = Vector2(-22, 0)
+stream = ExtResource("12_0um1m")
+volume_db = -9.551
+autoplay = true
+parameters/looping = false
+
+[node name="Caracoles" type="AudioStreamPlayer2D" parent="maincharacter"]
+position = Vector2(-22, 0)
+stream = ExtResource("13_2odhl")
+
+[node name="Collectable" type="AudioStreamPlayer2D" parent="maincharacter"]
+position = Vector2(-22, 0)
+stream = ExtResource("14_1485u")
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("7_sgltp")
+
+[node name="Collectables" type="Node" parent="."]
+
+[node name="Cherry" parent="Collectables" instance=ExtResource("5_0japl")]
+position = Vector2(886, 138)
+
+[node name="Pina" parent="Collectables" instance=ExtResource("6_yntn8")]
+position = Vector2(1034, 242)
+
+[node name="Finish" parent="Collectables" instance=ExtResource("8_yxj4u")]
+position = Vector2(6407, 132)
+script = ExtResource("9_c0nkh")
+
+[node name="Pina2" parent="Collectables" instance=ExtResource("6_yntn8")]
+position = Vector2(1345, -4)
+
+[node name="fresas" parent="Collectables" instance=ExtResource("10_dw4fb")]
+position = Vector2(1523, 93)
+
+[node name="fresas2" parent="Collectables" instance=ExtResource("10_dw4fb")]
+position = Vector2(743, 236)
+
+[node name="Banana" parent="Collectables" instance=ExtResource("4_spe05")]
+position = Vector2(1387, 202)
+
+[node name="Pina3" parent="Collectables" instance=ExtResource("6_yntn8")]
+position = Vector2(1407, -289)
+
+[node name="Pina4" parent="Collectables" instance=ExtResource("6_yntn8")]
+position = Vector2(1524, -290)
+
+[node name="Pina5" parent="Collectables" instance=ExtResource("6_yntn8")]
+position = Vector2(1624, -291)
+
+[node name="fresas3" parent="Collectables" instance=ExtResource("10_dw4fb")]
+position = Vector2(2208, -190)
+
+[node name="fresas4" parent="Collectables" instance=ExtResource("10_dw4fb")]
+position = Vector2(1988, -202)
+
+[node name="fresas5" parent="Collectables" instance=ExtResource("10_dw4fb")]
+position = Vector2(2092, 34)
+
+[node name="fresas6" parent="Collectables" instance=ExtResource("10_dw4fb")]
+position = Vector2(2082, 201)
+
+[node name="Cherry2" parent="Collectables" instance=ExtResource("5_0japl")]
+position = Vector2(2651, -107)
+
+[node name="Cherry3" parent="Collectables" instance=ExtResource("5_0japl")]
+position = Vector2(2596, 319)
+
+[node name="fresas7" parent="Collectables" instance=ExtResource("10_dw4fb")]
+position = Vector2(2437, 232)
+
+[node name="Pina6" parent="Collectables" instance=ExtResource("6_yntn8")]
+position = Vector2(3010, 324)
+
+[node name="Pina7" parent="Collectables" instance=ExtResource("6_yntn8")]
+position = Vector2(3421, 193)
+
+[node name="fresas8" parent="Collectables" instance=ExtResource("10_dw4fb")]
+position = Vector2(3654, 47)
+
+[node name="fresas9" parent="Collectables" instance=ExtResource("10_dw4fb")]
+position = Vector2(3816, -60)
+
+[node name="fresas10" parent="Collectables" instance=ExtResource("10_dw4fb")]
+position = Vector2(3975, 38)
+
+[node name="Banana2" parent="Collectables" instance=ExtResource("4_spe05")]
+position = Vector2(2898, -386)
+
+[node name="Banana3" parent="Collectables" instance=ExtResource("4_spe05")]
+position = Vector2(4606, -375)
+
+[node name="Pina8" parent="Collectables" instance=ExtResource("6_yntn8")]
+position = Vector2(3185, -195)
+
+[node name="Pina9" parent="Collectables" instance=ExtResource("6_yntn8")]
+position = Vector2(3472, -204)
+
+[node name="Pina10" parent="Collectables" instance=ExtResource("6_yntn8")]
+position = Vector2(4188, -152)
+
+[node name="Pina11" parent="Collectables" instance=ExtResource("6_yntn8")]
+position = Vector2(4446, -242)
+
+[node name="Pina12" parent="Collectables" instance=ExtResource("6_yntn8")]
+position = Vector2(4568, 182)
+
+[node name="Cherry4" parent="Collectables" instance=ExtResource("5_0japl")]
+position = Vector2(3755, 319)
+
+[node name="Banana4" parent="Collectables" instance=ExtResource("4_spe05")]
+position = Vector2(4042, 337)
+
+[node name="Cherry5" parent="Collectables" instance=ExtResource("5_0japl")]
+position = Vector2(4265, 317)
+
+[node name="Banana5" parent="Collectables" instance=ExtResource("4_spe05")]
+position = Vector2(4680, -125)
+
+[node name="fresas11" parent="Collectables" instance=ExtResource("10_dw4fb")]
+position = Vector2(5356, 241)
+
+[node name="Cherry6" parent="Collectables" instance=ExtResource("5_0japl")]
+position = Vector2(5529, 41)
+
+[node name="Pina13" parent="Collectables" instance=ExtResource("6_yntn8")]
+position = Vector2(5713, -152)
+
+[node name="Banana6" parent="Collectables" instance=ExtResource("4_spe05")]
+position = Vector2(5937, -321)
+
+[node name="fresas12" parent="Collectables" instance=ExtResource("10_dw4fb")]
+position = Vector2(4925, 330)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 322.0
+offset_bottom = 100.0
+
+[node name="Puntos" type="Label" parent="CanvasLayer/Panel"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Puntos: 0"
+
+[node name="Enemigos" type="Node" parent="."]
+
+[node name="Caracol2" parent="Enemigos" instance=ExtResource("11_fjgmk")]
+position = Vector2(3149, 217)
+
+[node name="Caracol" parent="Enemigos" instance=ExtResource("11_fjgmk")]
+position = Vector2(2662, 215)
+
+[node name="Caracol3" parent="Enemigos" instance=ExtResource("11_fjgmk")]
+position = Vector2(405, 216)
+
+[node name="Caracol4" parent="Enemigos" instance=ExtResource("11_fjgmk")]
+position = Vector2(1289, 216)
+
+[node name="Caracol5" parent="Enemigos" instance=ExtResource("11_fjgmk")]
+position = Vector2(2004, 213)
+
+[node name="Caracol6" parent="Enemigos" instance=ExtResource("11_fjgmk")]
+position = Vector2(3794, 217)
+
+[node name="Caracol7" parent="Enemigos" instance=ExtResource("11_fjgmk")]
+position = Vector2(4064, 215)
+
+[node name="Caracol8" parent="Enemigos" instance=ExtResource("11_fjgmk")]
+position = Vector2(3222, -311)
+
+[node name="Caracol9" parent="Enemigos" instance=ExtResource("11_fjgmk")]
+position = Vector2(4189, -266)
+
+[node name="Caracol10" parent="Enemigos" instance=ExtResource("11_fjgmk")]
+position = Vector2(4994, 215)
+
+[node name="Caracol11" parent="Enemigos" instance=ExtResource("11_fjgmk")]
+position = Vector2(6137, 215)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.0761944, 0.0761925, 0.0828522, 1)
+
+[connection signal="body_entered" from="Collectables/Finish" to="Collectables/Finish" method="_on_body_entered"]
